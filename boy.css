@@ -28,14 +28,16 @@ body{
   color: white;
   text-decoration: none;
   margin-top: 0px;
-  z-index: 2
-  .nav a::before{
+  
+}
+.nav a::before{
   content: '';
   position: absolute;
   height: 0px;
   width: 0px;
   top: 100%;
   background: white;
+  color: white;
   transition: 0.9s;
 }
 .nav a:hover::before{
@@ -43,11 +45,11 @@ body{
   width: 100%;
   border-radius: 10px;
   background: red;
-  color: red;
+  color: red; 
   color: green;
   z-index: 11;
 }
-}
+
 .img img{
   display: flex;
   justify-content: center;
