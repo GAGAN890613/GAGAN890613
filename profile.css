@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blueviolet;
+}
+.propic{
+    width: 150px;
+    height: 150px;
+    background: url('https://i.ibb.co/xmTxPKk/profile1.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    top: 70;
+}
+.propic:hover{
+    box-shadow: 0 0 10px rgb(93, 3, 93),
+                0 0 20px rgb(93, 3, 93),
+                0 0 10px rgb(186, 4, 65);
+    zoom: 1.058;
+    border-radius: 40px;
+                
+}
+.outer{
+    
+    text-align: left;
+    height: 400px;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: aliceblue;
+    overflow: hidden;
+    box-shadow: 0 0 10px black,
+                0 0 20px black,
+                0 0 50px black;
+}
+.left,.right{
+    
+    position: relative;
+    top: 100px;
+    left: 30px;
+    list-style-type: none;
+    font-family: "Sedan SC", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: blueviolet;
+  animation: scright 1.0s linear;
+}
+@keyframes scright{
+    0%{
+    transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+} 
+
+.right{
+    height: fit-content;
+    width: 250PX;
+    flex-wrap: wrap;
+    position: relative;
+    top: -28%;
+    left: 42%;
+    color: black;
+    animation: scleft 1.0s linear;
+}
+.right a{
+    color: rgb(38, 104, 202);
+    text-decoration: none;
+}
+@keyframes scleft{
+    0%{
+transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
