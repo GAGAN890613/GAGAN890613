@@ -94,6 +94,7 @@ body{
     flex-wrap: wrap;
 
 }
+
 .container{
     display: flex;
     align-items: center;
@@ -145,11 +146,15 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     height: 400px;
     width: 50%;
     margin-left: 15px;
     
+}
+@media screen and (max-width:1158px){
+    .fir-div{
+        width: 100%;
+    }
 }
 .fir-div p{
 flex-wrap: nowrap;
@@ -201,8 +206,10 @@ overflow: auto;
 .coff{
     position: relative;
     text-align: left;
+    top: -20px;
     left: 00px;
-    font-weight: 1s900;
+    font-size: 25px;
+    font-weight: 900;
 }
 .sectiona{
     display: flex;
@@ -212,9 +219,11 @@ overflow: auto;
     position: relative;
 height: 300px;
 width: 90%;
-margin-left: 5%;
+margin-left: 0%;
 overflow: scroll;
 flex-wrap: wrap;
+border-radius: 10px;
+box-shadow: 0 0 10px black;
 }
 .sectiona::-webkit-scrollbar{
     background: transparent;
@@ -225,10 +234,35 @@ flex-wrap: wrap;
     background: purple;
 }
 .diva{
-    margin: 5px;
+    margin: 10px;
     height: 280px;
     width: 280px;
+    border-radius: 10px;
 }
+.hover-text{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: linear-gradient(to top,black,transparent);
+    opacity: 0;
+    -webkit-text-stroke: 1px black;
+    
+}
+.hover-text p{
+    font-family: sans-serif;
+    font-size: 25;
+    font-weight: bolder;
+    color: rgba(245, 225, 51, 0.875);
+}
+.hover-text:hover{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
 .secimg{
     height: 278px;
     width: 278px;
@@ -243,6 +277,13 @@ flex-wrap: wrap;
 .diva:hover{
     transform: scale(1.05);
     overflow: hidden;
+}
+.fac-head{
+    position: relative;
+    text-align: left;
+    left: 00px;
+    font-size: 25px;
+    font-weight: 900;
 }
 .staff{
     display: flex;
