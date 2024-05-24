@@ -10,6 +10,7 @@ body{
     flex-direction: column;
     text-align: center;
     padding: 20px;
+
 }
 
 .navbar{
@@ -18,12 +19,14 @@ body{
     padding: 10px;
     margin: 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
     overflow: hidden;
     background: rgb(166, 36, 196);
+
+    
 }
 #menu{
     display: none;
@@ -89,11 +92,72 @@ body{
 .head{
     color: red;
     font-size:36px;
+    animation: scrolltop ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .para{
     flex-wrap: wrap;
-
+    animation: scrolltop ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
+
+
+/* textcontent */
+
+.text-cont{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-note{
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    font-family: poppins,sans-serif;
+    font-size: 60;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(31, 221, 10);
+    margin: 10px;
+    
+}
+.welcome-note::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-right: 5px solid rgb(31, 221, 10);
+    color: rgb(31, 221, 10);
+    width: 0%;
+    height: 100%;
+    overflow:hidden ;
+    -webkit-text-stroke: 2px rgb(31, 221, 10);
+    animation: slide 4s linear infinite;
+   
+}
+@keyframes slide{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 50%;
+        overflow: ;
+    }
+    100%{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+.textsides{
+    font-family: sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 60px;
+}
+
+/* textcontent */
 
 .container{
     display: flex;
@@ -105,7 +169,9 @@ body{
     padding: 20px;
     flex-grow: 1;
     overflow: visible;
-
+    animation: scrolldown ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .hills{
     position: relative;
@@ -131,6 +197,9 @@ body{
   font-optical-sizing: auto;
   font-weight: 1000;
   font-style: normal;
+  animation: scrolltop ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .mainpage{
     display: flex;
@@ -155,6 +224,9 @@ body{
     .fir-div{
         width: 100%;
     }
+    .textsides{
+        display: none;
+    }
 }
 .fir-div p{
 flex-wrap: nowrap;
@@ -167,6 +239,14 @@ overflow: auto;
     height: 500px;
     width: 500pX;
     margin: 20px;
+    animation: scrollleft ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+.imge{
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 @media screen and (max-width:500px) {
     .mainpage{
@@ -180,6 +260,7 @@ overflow: auto;
         height: 250px;
         width: 250px;
         border: 2px solid;
+        animation: none;
     }
     .fir-div{
         height: fit-content;
@@ -189,6 +270,7 @@ overflow: auto;
     .coff{
         position: relative;
         left: 00px;
+        
     }
     .fotter{
         flex-direction: column;
@@ -210,7 +292,11 @@ overflow: auto;
     left: 00px;
     font-size: 25px;
     font-weight: 900;
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
+
 .sectiona{
     display: flex;
     justify-content: space-evenly;
@@ -224,6 +310,9 @@ overflow: scroll;
 flex-wrap: wrap;
 border-radius: 10px;
 box-shadow: 0 0 10px black;
+animation: scrollleft ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .sectiona::-webkit-scrollbar{
     background: transparent;
@@ -234,7 +323,7 @@ box-shadow: 0 0 10px black;
     background: purple;
 }
 .diva{
-    margin: 10px;
+    margin-right: 10px;
     height: 280px;
     width: 280px;
     border-radius: 10px;
@@ -284,6 +373,9 @@ box-shadow: 0 0 10px black;
     left: 00px;
     font-size: 25px;
     font-weight: 900;
+    animation: scrollleft ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .staff{
     display: flex;
@@ -297,12 +389,16 @@ box-shadow: 0 0 10px black;
     width: 90%;
     overflow: auto;
     flex-wrap: wrap;
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .staffimg{
     height: 178px;
     width: 178px;
     background-size: cover;
     border-radius: 100px;
+   
 }
 .staffimg:hover{
     transform: scale(1.05);
@@ -324,6 +420,9 @@ box-shadow: 0 0 10px black;
     height: fit-content;
     width: 90%;
     padding: 10px;
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
 }
 .booka{
     flex-grow: 1;
@@ -369,15 +468,16 @@ box-shadow: 0 0 10px black;
     background: transparent;
 }
 footer{
+    padding: 20px;
     text-align: center;
     display: flex;
-    gap: 40px;
+    gap: auto;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     height: fit-content;
-    width: 90%;
+    width: 100%;
     border-top: 2px solid black;
     overflow: hidden;
 }
@@ -385,9 +485,58 @@ h5{
     font-size: 22px;
     font-family: monospace;
 }
+.about{
+   padding: 12;
+}
 .about ul li{
     list-style-type: none;
 }
 .aboutc ul li{
     list-style-type: none;
+}
+
+/* Animation onscroll */
+@keyframes scrollright{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes scrollleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes scrolltop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes scrolldown{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
