@@ -60,12 +60,14 @@ body{
     }
 }
 .logo{
-    color: black;
-    -webkit-text-stroke: 1px rgb(250, 248, 248);
-    font-family: monospace;
-    font-weight: bolder;
-    font-size: 24px;
+    width: 250px;
+    height: 50px;
     position: relative;
+}
+.logo-img{
+    height: 100%;
+    width: 100%;
+    filter: contrast(30px);
 }
 .menu a{
     margin: 2px;
@@ -225,7 +227,7 @@ body{
         width: 100%;
     }
     .textsides{
-        display: none;
+        font-size: 25;
     }
 }
 .fir-div p{
@@ -284,6 +286,17 @@ overflow: auto;
     .container{
         width: 100%;
     }
+.welcome-note::before{
+    -webkit-text-stroke: 2px blueviolet;
+    color: blueviolet;
+   
+}
+.textsides{
+   display: none;
+}
+.welcome-note{
+    
+}
 }
 .coff{
     position: relative;
@@ -412,6 +425,12 @@ animation: scrollleft ease-in-out both;
     justify-content: center;
     flex-direction: column;
 }
+.eve-gal{
+    text-transform: uppercase;
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
 .bookz{
     display: flex;
     align-items: center;
@@ -420,7 +439,7 @@ animation: scrollleft ease-in-out both;
     height: fit-content;
     width: 90%;
     padding: 10px;
-    animation: scrollright ease-in-out both;
+    animation: scrollleft ease-in-out both;
     animation-timeline: view();
     animation-range: entry 10% cover 50%;
 }
@@ -458,7 +477,131 @@ animation: scrollleft ease-in-out both;
     transform: scale(1.05);
 }
 
+/* Payment gateway section */
 
+.plan{
+    margin-top: 150px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 350px;
+    width: 90%;
+    background-color: rgb(5, 5, 39);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px black;
+    animation: scrollright ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+.payment{
+    text-align: center;
+    position: relative;
+    top: -120;
+    width: 50px;
+    height: fit-content;
+    background: url("https://i.ibb.co/H2Dm5L3/Picsart-24-05-25-14-15-26-355.jpg");
+    background-size: cover;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10PX;
+    box-shadow: 0 0 10px rgb(254, 253, 253);
+    flex-grow: 1;
+    color: white;
+    border: 1px solid white;
+}
+.payment h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: rgb(19, 245, 11);
+}
+.payment ul li{
+    position: relative;
+    top: -15;
+    margin-left: 15;
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+}
+.hoverbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,black,transparent);
+}
+.hoverbtn:hover{
+    opacity: 1;
+}
+.hoverbtn button{
+    font-weight: bolder;
+    position: relative;
+    top: 60;
+    padding: 5px 40px;
+    border-radius: 20px;
+    border: none;
+    background: greenyellow;
+    box-shadow: 0 0 10px black;
+    z-index: 111;
+}
+.payment button:hover{
+  color: aliceblue;
+  background: blueviolet;
+}
+@media  (max-width:500px) {
+    .plan{
+        flex-direction: column;
+        height: fit-content;
+        overflow: visible;
+    }
+    .payment{
+        width: 80%;
+       height: fit-content;
+    }
+    .hoverbtn button{
+        top: 3px;
+    }
+}
+h6{
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+   
+    width: 60%;
+}
+.paygate{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: -120;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+marquee{
+    width: 80%;
+}
+marquee img{
+    margin-left: 50px;
+}
+
+/* Payment gateway section */
 
 
 
