@@ -31,34 +31,7 @@ body{
 #menu{
     display: none;
 }
-@media screen and (max-width:980px) {
-    .navbar{
-        overflow: visible;
-    }
-    header{
-        position: relative;
-        color: black;
-        border-radius: 10px;
-          }
-    button{
-    
-        position: absolute;
-        left: 0;
-    }
-    .menu a{
-        display: none;
-    }
-    #menu{
-        padding: 5px;
-        display: block;
-        position: relative;
-        left: -30px;
-        background: transparent;
-        border: none;
-        outline: none;
-        scrollbar-highlight-color: transparent;
-    }
-}
+
 .logo{
     width: 250px;
     height: 50px;
@@ -222,14 +195,7 @@ body{
     margin-left: 15px;
     
 }
-@media screen and (max-width:1158px){
-    .fir-div{
-        width: 100%;
-    }
-    .textsides{
-        font-size: 25;
-    }
-}
+
 .fir-div p{
 flex-wrap: nowrap;
 overflow: auto;
@@ -250,54 +216,7 @@ overflow: auto;
     animation-timeline: view();
     animation-range: entry 10% cover 50%;
 }
-@media screen and (max-width:500px) {
-    .mainpage{
-        flex-wrap: wrap;
-        height: fit-content;
-        max-width: 300px;
-        overflow: hidden;
-    }
-    .imgf,.imge{
-        position: relative;
-        height: 250px;
-        width: 250px;
-        border: 2px solid;
-        animation: none;
-    }
-    .fir-div{
-        height: fit-content;
-        width: 90%;
-        margin-left: 15px;
-    }
-    .coff{
-        position: relative;
-        left: 00px;
-        
-    }
-    .fotter{
-        flex-direction: column;
-    }
-    .common{
-        flex-grow: 1;
-    }
-    .hills{
-        width: 100%;
-    }
-    .container{
-        width: 100%;
-    }
-.welcome-note::before{
-    -webkit-text-stroke: 2px blueviolet;
-    color: blueviolet;
-   
-}
-.textsides{
-   display: none;
-}
-.welcome-note{
-    
-}
-}
+
 .coff{
     position: relative;
     text-align: left;
@@ -484,8 +403,8 @@ animation: scrollleft ease-in-out both;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 350px;
+    justify-content: center;
+    height: fit-content;
     width: 90%;
     background-color: rgb(5, 5, 39);
     background-size: cover;
@@ -559,20 +478,7 @@ animation: scrollleft ease-in-out both;
   color: aliceblue;
   background: blueviolet;
 }
-@media  (max-width:500px) {
-    .plan{
-        flex-direction: column;
-        height: fit-content;
-        overflow: visible;
-    }
-    .payment{
-        width: 80%;
-       height: fit-content;
-    }
-    .hoverbtn button{
-        top: 3px;
-    }
-}
+
 h6{
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -585,13 +491,13 @@ h6{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+   
     width: 100%;
     height: 50%;
     position: relative;
     top: -120;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; 
     
 }
 marquee{
@@ -683,3 +589,120 @@ h5{
         transform: translateY(0px);
     }
 }
+
+/* Media queries */
+
+@media screen and (max-width:500px) {
+    .mainpage{
+        flex-wrap: wrap;
+        height: fit-content;
+        max-width: 300px;
+        overflow: hidden;
+    }
+    .imgf,.imge{
+        position: relative;
+        height: 250px;
+        width: 250px;
+        border: 2px solid;
+        animation: none;
+    }
+    .fir-div{
+        height: fit-content;
+        width: 90%;
+        margin-left: 15px;
+    }
+    .coff{
+        position: relative;
+        left: 00px;
+        
+    }
+    .fotter{
+        flex-direction: column;
+    }
+    .common{
+        flex-grow: 1;
+    }
+    .hills{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+.welcome-note::before{
+    -webkit-text-stroke: 2px blueviolet;
+    color: blueviolet;
+   
+}
+.plan{
+    flex-direction: column;
+    height: fit-content;
+    overflow: visible;
+    flex-wrap: nowrap;
+}
+.plan{
+    height: 700px;
+}
+.payment{
+    position: relative;
+    top: 0px;
+    width: 80%;
+   height: fit-content;
+}
+.hoverbtn button{
+    top: 3px;
+}
+.textsides{
+   display: none;
+}
+.welcome-note{
+    
+}
+.paygate{
+    position: relative;
+    top: 0;
+    overflow: hidden; 
+}
+marquee{
+
+}
+}
+
+@media screen and (max-width:980px) {
+    .navbar{
+        overflow: visible;
+    }
+    header{
+        position: relative;
+        color: black;
+        border-radius: 10px;
+          }
+    button{
+    
+        position: absolute;
+        left: 0;
+    }
+    .menu a{
+        display: none;
+    }
+    #menu{
+        padding: 5px;
+        display: block;
+        position: relative;
+        left: -30px;
+        background: transparent;
+        border: none;
+        outline: none;
+        scrollbar-highlight-color: transparent;
+    }
+}
+
+@media screen and (max-width:1158px){
+    .fir-div{
+        width: 100%;
+    }
+    .textsides{
+        font-size: 25;
+    }
+}
+
+/* Media queries */
