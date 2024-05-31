@@ -20,6 +20,10 @@
     font-weight: bolder;
     font-size: 30px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 #menu{
     display: none;
 }
@@ -73,6 +77,10 @@
 .menu a:hover{
     color: darkblue;
 }
+.fa-regular,.fa-solid{
+    position: relative;
+    left: -10px;
+}
 .btnn,.btn{
     font-weight: bold;
     color: black;
@@ -85,6 +93,8 @@
     box-shadow: 0 0 10px rgb(7, 146, 177);
 }
 .btnn{
+    position: relative;
+    top: -30;
     padding: 5px 40px;
 }
 body{
@@ -109,12 +119,11 @@ h5{
 }
 input{
     position: relative;
-    top: -70;
+    left: -15px;
     padding: 5px;
     width: 70% ;
     background: rgba(225, 225, 225, -5);
     border: none;
-    border-bottom: 2px solid black;
     outline: none;
     color: rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -123,6 +132,16 @@ input{
 }
 ::placeholder{
     color: black;
+}
+.values{
+    position: relative;
+    top: -70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 60%;
+   border-bottom: 2px solid black;
 }
 label{
     position: relative;
