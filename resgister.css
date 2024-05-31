@@ -79,7 +79,7 @@ a{
 }
 .fa-regular,.fa-solid{
     position: relative;
-    left: -10px;
+    left: 0px;
 }
 .btnn,.btn{
     font-weight: bold;
@@ -119,23 +119,23 @@ h5{
 }
 input{
     position: relative;
-    left: -15px;
     padding: 5px;
     width: 70% ;
-    background: rgba(225, 225, 225, -5);
+    background: transparent;
     border: none;
     outline: none;
     color: rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     font-style: oblique;
+    width: 90%;
 }
 ::placeholder{
     color: black;
 }
 .values{
     position: relative;
-    top: -70;
+    top: -70px;
     display: flex;
     align-items: center;
     justify-content: center;
