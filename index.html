@@ -1,40 +1,56 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="resgister.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body class="flex">
     <nav class="navbar">
         <header class="logo">Login logo</header>
         <br><span id="title">MR COLLEGE(A)</span>
         <button class="btn">Login</button>
     </nav>
-    <form  class="userform flex">
+    <form class="userform flex">
         <h5>REGISTER</h5>
-        <input type="email" name="email" id="email" required placeholder="Email" ><br>
-        <input id="user" name="user" type="text" required placeholder="Username"><br>
-        <input id="pass" name="pass" type="password" required placeholder="Password"><br>
+        <div class="emailid values">
+            <i class="fa-regular fa-envelope"></i>&emsp;
+            <input type="email" name="email" id="email" required placeholder="Email">
+        </div>
+        <br>
+        <div class="username values">
+            <i class="fa-regular fa-user"></i>&emsp;
+            <input id="user" name="user" type="text" required placeholder="Username">
+        </div><br>
+        <div class="password values">
+            <i class="fa-solid fa-lock"></i>&emsp;
+            <input id="pass" name="pass" type="password" required placeholder="Password">
+        </div>
+        <br>
         <a href="#user">Forgot Password</a>
         <button class="btnn" type="button" onclick="regi()">SUBMIT</button>
     </form>
 
     <script>
-        function regi(){
+        function regi() {
             const userr = document.getElementById('user').value;
             const passr = document.getElementById('pass').value;
-            localStorage.setItem("username",userr);
-            localStorage.setItem("password",passr);
-            if(userr && passr){
+            localStorage.setItem("username", userr);
+            localStorage.setItem("password", passr);
+            if (userr && passr) {
                 window.location.href = "login.html";
             }
-            else{
-                window.alert("empty file");
+            else {
+                window.alert("Fill The Requred Fields");
             }
             return false;
         }
 
     </script>
 </body>
+
 </html>
